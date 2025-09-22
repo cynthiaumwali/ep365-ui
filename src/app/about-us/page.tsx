@@ -17,6 +17,7 @@ const AboutUsPage = () => {
   return (
     <>
       <Hero />
+      <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
       <EPOverview />
       <Mission />
       <Features />

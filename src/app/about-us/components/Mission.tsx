@@ -1,4 +1,3 @@
-import { Globe } from "@/components/magicui/globe";
 import React from "react";
 
 const Mission = () => {
@@ -19,9 +18,6 @@ const Mission = () => {
             teams save time, reduce costs, and scale faster.
           </p>
         </div>
-              <div className="border w-full relative rounded-md flex items-end overflow-hidden">
-                <Globe className="size-90" />
-              </div>
       </div>
     </section>
   );
