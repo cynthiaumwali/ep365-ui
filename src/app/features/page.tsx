@@ -17,7 +17,7 @@ import Features from "./components/Features/Features";
 import AboutUs from "./components/AboutUs/AboutUs";
 import WhyUs from "./WhyUs/WhyUs";
 import Partners from "./Partners/Partners";
-import ContactUS from "@/components/page-components/Contact";
+import ContactUS from "@/components/page-components/Contact/Contact";
 
 export const metadata = {
   title: "Features | EP 365",

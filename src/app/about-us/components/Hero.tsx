@@ -1,54 +1,42 @@
-"use client";
-
-import { motion } from "framer-motion";
-import OrbitingCircle from "./OrbitingCircle";
+import React from "react";
+import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden">
-      <section className="relative sm:pt-16 overflow-hidden pt-[130px] md:pt-[120px] xl:pt-[140px] 2xl:pt-[160px]">
-        <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto text-center mt-16">
-            <motion.h2
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: 0.2 }}
-              className="font-semibold text-4xl sm:text-4xl lg:text-5xl text-center mb-12 capitalize max-w-2xl mx-auto"
-            >
-              Procurement Software with a Partnership Mindset
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: 0.2 }}
-              className="mt-5 text-lg max-w-xl mx-auto font-normal text-gray-600 dark:text-gray-400"
-            >
-              EP365 adapts to every role — from day-to-day requesters to
-              decision makers. Easily tailor your workspace with flexible
-              modules, role-based access, and smart approval flows. Spend less
-              time on setup and more on what really matters: efficient
-              procurement.
-            </motion.p>
-            <motion.div
-              className="px-8 sm:items-center sm:justify-center sm:px-0 sm:space-x-5 sm:flex my-9"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            >
-              <motion.a
-                href="#"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center w-full px-8 py-2 text-lg font-semibold text-white transition-all duration-2 border-2 border-transparent sm:w-auto rounded-full font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 bg-black hover:text-black hover:bg-gray-50 hover:border-black"
-              >
-                Book a demo
-              </motion.a>
-            </motion.div>
-            <OrbitingCircle />
-          </div>
+    <section className="max-w-7xl mx-auto border-divide items-center justify-center border-x px-4 md:px-6 pt-16 pb-10 md:pt-36 lg:pt-48 md:pb-20 flex flex-col gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 justify-center items-center">
+        <div className="flex flex-col justify-start items-start text-start gap-4 mb-10">
+          <Badge variant="outline" className="text-xs text-primary border-none">About EP365</Badge>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-md font-medium capitalize">
+            Unifying Procurement, One Piece at a Time
+          </h2>
+          <p className="text-muted-foreground max-w-xl">
+            Founded in 2015 with a people-first mindset, EP365 helps over 1,000
+            global companies simplify procurement. We centralize purchasing,
+            automate manual tasks, and deliver deep spend insights — helping
+            teams save time, reduce costs, and scale faster.
+          </p>
+          <p className="text-muted-foreground max-w-xl">
+            Founded in 2015 with a people-first mindset, EP365 helps over 1,000
+            global companies simplify procurement. We centralize purchasing,
+            automate manual tasks, and deliver deep spend insights — helping
+            teams save time, reduce costs, and scale faster.
+          </p>
         </div>
-      </section>
-    </div>
+        <div className="border border-border rounded-lg p-2 w-full h-fit">
+          <Image
+            alt="About Us Image"
+            width={450}
+            height={450}
+            className="w-full h-auto rounded-xl object-cover transition-all duration-500"
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1361&auto=format&fit=crop"
+            priority
+            fetchPriority="high"
+          />
+        </div>
+      </div>
+    </section>
   );
 };
 

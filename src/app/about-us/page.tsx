@@ -2,12 +2,11 @@ import { Metadata } from "next";
 import React from "react";
 import Hero from "./components/Hero";
 import EPOverview from "./components/EPOverview";
-import Mission from "./components/Mission";
 import Features from "./components/Features/Features";
-import FAQs from "./components/FAQs";
-import ContactUS from "@/components/page-components/Contact";
+import ContactUS from "@/components/page-components/Contact/Contact";
 import WhyUs from "./components/WhyUs/WhyUs";
 import ComparisonTable from "./components/ComparisonTable";
+import FAQ from "@/components/page-components/FAQs/FAQs";
 export const metadata: Metadata = {
   title: "About Us | EP 365",
   description:
@@ -17,12 +16,17 @@ const AboutUsPage = () => {
   return (
     <>
       <Hero />
+      <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
       <EPOverview />
-      <Mission />
+      <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
       <Features />
+      <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
       <WhyUs />
+      <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
       <ComparisonTable />
-      <FAQs />
+      <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
+      <FAQ />
+      <div className="bg-muted-foreground/15 h-[1px] w-full"></div>
       <ContactUS />
     </>
   );

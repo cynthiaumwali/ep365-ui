@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import SectionTitle from "../common/SectionTitle"
 import Section from "../common/Section"
+import Image from "next/image"
 
 interface Feature {
   title: string
@@ -25,7 +26,6 @@ export default function Features({ items, autoPlay = true, interval = 5000 }: Fe
   const progressTimerRef = useRef<NodeJS.Timeout | null>(null)
 
   const startProgressTimer = (startFromProgress = 0) => {
-    // Clear any existing timer
     if (progressTimerRef.current) {
       clearInterval(progressTimerRef.current)
     }
@@ -77,10 +77,10 @@ export default function Features({ items, autoPlay = true, interval = 5000 }: Fe
     <Section className="md:px-0 pt-12 border-x border-divide">
       <div className="flex flex-col justify-center items-center text-center gap-4 mb-12">
         <Badge variant="outline" className="text-xs text-primary border-none font-medium">How It Works</Badge>
-        <SectionTitle title="Integrates Easily" />
-        <p className="text-muted-foreground max-w-md mx-auto">
-          We empower developers and technical teams to create, simulate, and manage AI-driven workflows visually
-        </p>
+        <SectionTitle title="Effortless Implementation, Lasting Procurement Value " />
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          EP365 makes procurement automation simple. Go live fast, empower your
+          teams, and achieve measurable ROI without the headaches of complex IT rollouts.        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t">
@@ -111,12 +111,24 @@ export default function Features({ items, autoPlay = true, interval = 5000 }: Fe
 
         <div className="relative min-h-[300px] flex items-center justify-center">
           {items.map((item, idx) => (
+
             <div
               key={idx}
-              className={cn("absolute inset-0 transition-opacity duration-500 h-90 rounded-lg overflow-clip bg-center bg-no-repeat bg-contain", activeIndex === idx ? "opacity-100 z-10" : "opacity-0 z-0")}
-              style={{ backgroundImage: `url(${item.image})` }}
+              className={cn(
+                "absolute inset-0 transition-opacity duration-500 w-full rounded-lg overflow-clip",
+                activeIndex === idx ? "opacity-100 z-10" : "opacity-0 z-0"
+              )}
             >
+              <Image
+                src={item.image}
+                alt="Hero slide"
+                fill
+                priority={idx === 0}
+                sizes="100vw"
+                style={{ objectFit: "contain", objectPosition: "center" }}
+              />
             </div>
+
           ))}
         </div>
       </div>
