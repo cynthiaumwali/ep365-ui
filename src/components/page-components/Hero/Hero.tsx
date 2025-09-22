@@ -14,7 +14,7 @@ export default function Hero() {
       <p className="text-center text-base text-muted-foreground max-w-lg mb-2">
         Budgets, compliance, and timelines demand clarity. EP365 delivers
         centralized, AI-powered procurement that gives every team the visibility and control they
-        need to scale with ease            
+        need to scale with ease
       </p>
       <div className="flex items-center gap-4 mb-2">
         <Button className="bg-black text-white dark:bg-white dark:text-black">Book a demo</Button>

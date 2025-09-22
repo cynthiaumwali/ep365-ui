@@ -23,7 +23,7 @@ const Testimonials = () => {
               width={400}
               height={400}
               className="aspect-square mt-6 rounded-xl object-cover transition-all duration-500"
-              src={companies[selectedCompany].profileImage}
+              src={companies[selectedCompany].profileImage}            
             />
           </div>
 

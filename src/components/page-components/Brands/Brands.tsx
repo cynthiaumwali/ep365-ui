@@ -24,6 +24,7 @@ export default function Brands() {
                 width={160}
                 height={40}
                 className="object-contain transition-all duration-500 hover:scale-[1.05] dark:invert dark:filter"
+                
               />
             </div>
           </div>

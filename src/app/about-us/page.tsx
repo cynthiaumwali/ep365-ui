@@ -5,7 +5,7 @@ import EPOverview from "./components/EPOverview";
 import Mission from "./components/Mission";
 import Features from "./components/Features/Features";
 import FAQs from "./components/FAQs";
-import ContactUS from "@/components/page-components/Contact";
+import ContactUS from "@/components/page-components/Contact/Contact";
 import WhyUs from "./components/WhyUs/WhyUs";
 import ComparisonTable from "./components/ComparisonTable";
 export const metadata: Metadata = {

@@ -1,33 +1,14 @@
 "use client";
 
+import { BorderBeam } from "@/components/magicui/border-beam";
 import { useRef } from "react";
-
-const features = [
-  {
-    title: "Intake management",
-    description:
-      "Capture purchase and vendor data right at the request stage, with employees guided step by step through a smart intake form.",
-    image: "/images/hero/procurement.png",
-  },
-  {
-    title: "Purchasing",
-    description:
-      "Keep buying easy and compliant with pre-approved vendors, items, and workflows built into the procurement software.",
-    image: "/images/hero/person.png",
-  },
-  {
-    title: "AI-powered AP automation",
-    description:
-      "Automate data extraction with AI-powered OCR and pay only fully approved, matched, and validated invoices.",
-    image: "/images/hero/sync2.png",
-  },
-];
+import { features } from "./featuresData";
 
 export default function FeatureScroller() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="relative">
+    <div className="relative">
       <div
         ref={scrollRef}
         className="flex overflow-x-auto gap-6 px-4 pb-4 scrollbar-hide scroll-smooth"
@@ -35,15 +16,21 @@ export default function FeatureScroller() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="min-w-[320px] md:min-w-[400px] md:max-w-lg flex-shrink-0 rounded-xl overflow-hidden border border-border cursor-pointer"
+            className="relative min-w-[320px] md:min-w-[400px] md:max-w-lg flex-shrink-0 rounded-xl overflow-hidden border border-border cursor-pointer p-4"
           >
+            <BorderBeam
+              duration={8}
+              size={300}
+              reverse
+              className="absolute inset-0 z-10 pointer-events-none from-transparent via-primary to-transparent"
+            />
             <div
-              className="h-70 bg-gray-100/50 bg-center bg-no-repeat bg-contain"
+              className="h-70 bg-center bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${feature.image})` }}
             >
             </div>
 
-            <div className="p-5">
+            <div className="pt-4">
               <h3 className="font-medium">
                 {feature.title}
               </h3>
@@ -52,6 +39,6 @@ export default function FeatureScroller() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

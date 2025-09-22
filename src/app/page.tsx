@@ -2,7 +2,7 @@ import AIFeatures from "@/components/page-components/AIFeatures/AIFeatures";
 import Banner from "@/components/page-components/Banner/Banner";
 import Benefits from "@/components/page-components/Benefits/Benefits";
 import Brands from "@/components/page-components/Brands/Brands";
-import ContactUS from "@/components/page-components/Contact";
+import ContactUS from "@/components/page-components/Contact/Contact";
 import Features from "@/components/page-components/Features/Features";
 import Hero from "@/components/page-components/Hero/Hero";
 import HeroImage from "@/components/page-components/Hero/HeroImage";

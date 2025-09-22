@@ -6,17 +6,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { WorldMap } from "@/components/ui/world-map";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { Card } from "@/components/ui/card";
 import Section from "../common/Section";
 import SectionTitle from "../common/SectionTitle";
 
-// Contact schema
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
@@ -49,43 +46,9 @@ const ContactUS = () => {
             We are always looking for ways to improve our products and services.
             Contact us and let us know how we can help you.
           </p>
-          <p className="text-gray-600 my-4">
+          <p className="text-muted-foreground my-4">
             info@ep365.com . +1 (800) 123 XX21 . support@yoursaas.ai
           </p>
-          <WorldMap
-            dots={[
-              {
-                start: {
-                  lat: 64.2008,
-                  lng: -149.4937,
-                }, // Alaska (Fairbanks)
-                end: {
-                  lat: 34.0522,
-                  lng: -118.2437,
-                }, // Los Angeles
-              },
-              {
-                start: { lat: 64.2008, lng: -149.4937 }, // Alaska (Fairbanks)
-                end: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
-              },
-              {
-                start: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
-                end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
-              },
-              {
-                start: { lat: 51.5074, lng: -0.1278 }, // London
-                end: { lat: 28.6139, lng: 77.209 }, // New Delhi
-              },
-              {
-                start: { lat: 28.6139, lng: 77.209 }, // New Delhi
-                end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
-              },
-              {
-                start: { lat: 28.6139, lng: 77.209 }, // New Delhi
-                end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
-              },
-            ]}
-          />
         </div>
 
         <div className="w-full md:w-1/2 space-y-4">
