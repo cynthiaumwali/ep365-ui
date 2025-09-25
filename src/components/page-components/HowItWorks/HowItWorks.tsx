@@ -93,8 +93,8 @@ export default function Features({ items, autoPlay = true, interval = 5000 }: Fe
               <div className="flex items-start gap-3">
                 {item.icon && <span className="mt-1">{item.icon}</span>}
                 <div>
-                  <h3 className="font-medium">{item.title}</h3>
-                  <p className="text-muted-foreground mt-2">{item.description}</p>
+                  <SectionTitle title={item.title} className="text-base" />
+                  <SectionDesc description={item.description} className="mt-2" />
                 </div>
               </div>
 

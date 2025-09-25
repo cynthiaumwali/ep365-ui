@@ -3,6 +3,8 @@
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { useRef } from "react";
 import { features } from "./featuresData";
+import SectionTitle from "../common/SectionTitle";
+import SectionDesc from "../common/SectionDesc";
 
 export default function FeatureScroller() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -31,10 +33,8 @@ export default function FeatureScroller() {
             </div>
 
             <div className="pt-4">
-              <h3 className="font-medium">
-                {feature.title}
-              </h3>
-              <p className="text-muted-foreground mt-2">{feature.description}</p>
+              <SectionTitle title={feature.title} className="text-base" />
+              <SectionDesc description={feature.description} className="mt-2" />
             </div>
           </div>
         ))}

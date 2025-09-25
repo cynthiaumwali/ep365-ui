@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { companies } from './testimonialsData';
+import SectionDesc from '../common/SectionDesc';
 
 const Testimonials = () => {
   const [hoveredLogo, setHoveredLogo] = useState<number | null>(null);
@@ -37,10 +38,7 @@ const Testimonials = () => {
                 className="h-6 w-auto object-contain dark:invert dark:filter transition-all duration-500"
                 src={companies[selectedCompany].logo}
               />
-
-              <blockquote className="mt-6 text-xl leading-relaxed transition-all duration-500">
-                &quot;{companies[selectedCompany].testimonial}&quot;
-              </blockquote>
+              <SectionDesc description={`"${companies[selectedCompany].testimonial}"`} className="text-lg max-w-md text-foreground mt-6" />
             </div>
 
             <div className="flex items-end justify-between gap-4 w-full">

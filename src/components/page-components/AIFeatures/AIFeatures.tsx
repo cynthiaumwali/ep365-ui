@@ -76,12 +76,8 @@ const headers = {
                 </div>
             </div>
             <div className="mt-3">
-                <span className="block font-medium leading-tight">
-                    Autonomous Sourcing
-                </span>
-                <span className="block text-muted-foreground text-base leading-tight mt-3">
-                    AI automates sourcing workflows from request to award.
-                </span>
+                <SectionTitle title="Autonomous Sourcing" className="text-base" />
+                <SectionDesc description="AI automates sourcing workflows from request to award." className="mt-3" />
             </div>
         </>
     ),
@@ -116,12 +112,8 @@ const headers = {
                 </div>
             </div>
             <div className="mt-3">
-                <span className="block font-medium leading-tight">
-                    AI RFP Generator
-                </span>
-                <span className="block text-muted-foreground text-base leading-tight mt-3">
-                    Instantly generate RFPs with AI-powered templates and suggestions.
-                </span>
+                <SectionTitle title="AI RFP Generator" className="text-base" />
+                <SectionDesc description="Instantly generate RFPs with AI-powered templates and suggestions." className="mt-3" />
             </div>
         </>
     ),
@@ -155,12 +147,8 @@ const headers = {
                 </div>
             </div>
             <div className="mt-3">
-                <span className="block font-medium leading-tight">
-                    AI-Powered Intake Assistant
-                </span>
-                <span className="block text-muted-foreground text-base leading-tight mt-3">
-                    Simplify requests with an intelligent assistant that captures details.
-                </span>
+                <SectionTitle title="AI-Powered Intake Assistant" className="text-base" />
+                <SectionDesc description="Simplify requests with an intelligent assistant that captures details." className="mt-3" />
             </div>
         </>
     ),
@@ -183,12 +171,8 @@ const headers = {
                 </div>
             </div>
             <div className="mt-3">
-                <span className="block font-medium leading-tight">
-                    AI Predictive & Spend Analytics
-                </span>
-                <span className="block text-muted-foreground text-base leading-tight mt-3">
-                    Forecast spending trends and optimize budgets with predictive AI.
-                </span>
+                <SectionTitle title="AI Predictive & Spend Analytics" className="text-base" />
+                <SectionDesc description="Forecast spending trends and optimize budgets with predictive AI." className="mt-3" />
             </div>
         </>
     ),
@@ -238,12 +222,8 @@ const headers = {
                 </div>
             </div>
             <div className="mt-3">
-                <p className="font-medium leading-tight">
-                    Supplier Analytics & Auto Scoring
-                </p>
-                <p className="text-base text-muted-foreground leading-tight mt-3">
-                    Evaluate suppliers with AI-driven scoring and insights.
-                </p>
+                <SectionTitle title="Supplier Analytics & Auto Scoring" className="text-base" />
+                <SectionDesc description="Evaluate suppliers with AI-driven scoring and insights." className="mt-3" />
             </div>
         </>
     ),
@@ -286,12 +266,8 @@ const headers = {
                 </div>
             </div>
             <div className="mt-3">
-                <p className="font-medium leading-tight">
-                    Compliance & Risk Insights
-                </p>
-                <p className="text-base text-muted-foreground leading-tight mt-3">
-                    Stay ahead with AI-powered compliance tracking and risk alerts.
-                </p>
+                <SectionTitle title="Compliance & Risk Insights" className="text-base" />
+                <SectionDesc description="Stay ahead with AI-powered compliance tracking and risk alerts." className="mt-3" />
             </div>
         </>
     ),
