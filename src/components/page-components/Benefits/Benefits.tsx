@@ -26,7 +26,7 @@ const Benefits = () => {
           return (
             <div
               key={index}
-              className="relative z-10 rounded-lg bg-gray-100/40 h-50 p-4 transition duration-200 hover:bg-gray-50/70 md:p-5 dark:bg-neutral-800"
+              className="relative z-10 rounded-lg bg-gray-100/40 h- p-4 transition duration-200 hover:bg-gray-50/70 md:p-5 dark:bg-neutral-800"
             >
               <motion.div
                 initial="hidden"
@@ -34,8 +34,9 @@ const Benefits = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 variants={itemVariants}
+                className="bg-primary/10 p-3.5 rounded-lg w-fit"
               >
-                <Icon className="text-primary size-5" />
+                <Icon className="text-primary size-4.5" />
               </motion.div>
 
               <motion.h3

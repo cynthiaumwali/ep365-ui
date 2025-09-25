@@ -1,28 +1,36 @@
-import { Monitor, Plug, Rocket } from "lucide-react";
+import { Rocket, Target, BarChart3, Shield } from "lucide-react";
 
 export const items = [
   {
-    title: "Design your Workflow",
-    description: "A drag-and-drop interface to create, connect, and configure agents into logical workflows",
-    icon: <Monitor className="w-5 h-5 text-primary" />,
+    title: "Seamless Go-Live",
+    subtitle: "Launch procurement workflows quickly with minimal IT involvement.",
+    description:
+      "Dedicated onboarding support ensures a smooth transition.",
+    icon: <Rocket className="w-5 h-5 text-primary" />,
     image: "/images/brands/div.png",
   },
   {
-    title: "Connect your Tools",
-    description: "Agents operate independently and coordinate tasks to complete complex goals together",
-    icon: <Plug className="w-5 h-5 text-primary" />,
+    title: "Operational Excellence",
+    subtitle: "Standardize procurement across teams and business units.",
+    description:
+      "Easy-to-use workflows accelerate user adoption.",
+    icon: <Target className="w-5 h-5 text-primary" />,
     image: "/images/brands/Operational Excellence.png",
   },
   {
-    title: "Deploy & Scale",
-    description: "Run agent workflows in a sandbox to preview behavior, debug logic, and test interactions",
-    icon: <Rocket className="w-5 h-5 text-primary" />,
+    title: "Smarter Spend & ROI",
+    subtitle: "Gain actionable spend insights with AI-powered analytics.",
+    description:
+      "Unlock savings through sourcing automation and consolidated purchasing.",
+    icon: <BarChart3 className="w-5 h-5 text-primary" />,
     image: "/images/brands/Smarter Spend and ROI.png",
   },
   {
-    title: "Deploy & Scale",
-    description: "Run agent workflows in a sandbox to preview behavior, debug logic, and test interactions",
-    icon: <Rocket className="w-5 h-5 text-primary" />,
+    title: "Scale with Confidence",
+    subtitle: "Strengthen compliance and risk management.",
+    description:
+      "Reinvest savings to fuel long-term growth and competitive advantage.",
+    icon: <Shield className="w-5 h-5 text-primary" />,
     image: "/images/brands/img.svg",
   },
-]
+];

@@ -9,6 +9,7 @@ import SectionDesc from "../common/SectionDesc"
 
 interface Feature {
   title: string
+  subtitle:string
   description: string
   icon?: React.ReactNode
   image: string
@@ -90,13 +91,16 @@ export default function Features({ items, autoPlay = true, interval = 5000 }: Fe
               className={cn("p-6 cursor-pointer relative transition-colors", activeIndex === idx ? "bg-gradient-to-b from-gray-100 to-transparent dark:bg-neutral-800" : "hover:bg-gray-50 dark:hover:bg-neutral-700")}
               onClick={() => handleClick(idx)}
             >
-              <div className="flex items-start gap-3">
-                {item.icon && <span className="mt-1">{item.icon}</span>}
-                <div>
-                  <h3 className="font-medium">{item.title}</h3>
-                  <p className="text-muted-foreground mt-2">{item.description}</p>
-                </div>
+              <div className="flex flex-row justify-start items-center gap-3">
+                {/* {item.icon && <span className="mt-1">{item.icon}</span>} */}
+                <p className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white">
+                  {idx + 1}
+                </p>
+                <SectionTitle title={item.title} className="text-base" />
               </div>
+              <SectionDesc description={item.subtitle} className="font-medium mt-2" />
+              <SectionDesc description={item.description} className="mt-2" />
+
 
               {activeIndex === idx && (
                 <div
