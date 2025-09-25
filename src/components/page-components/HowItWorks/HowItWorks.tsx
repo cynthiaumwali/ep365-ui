@@ -110,7 +110,6 @@ export default function Features({ items, autoPlay = true, interval = 5000 }: Fe
 
         <div className="relative min-h-[300px]">
           {items.map((item, idx) => (
-
             <div
               key={idx}
               className={cn(

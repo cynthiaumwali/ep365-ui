@@ -1,47 +1,47 @@
 import {
-  Rocket,
-  RefreshCw,
-  BarChart3,
-  Layers,
-  Users,
-  Share2,
+  DollarSign,
+  Zap,
+  Shield,
+  Link,
+  Brain,
+  Award,
 } from "lucide-react";
 
 export const benefitsData = [
   {
-    title: "Launch Faster",
+    title: "Reduce Costs by 25%",
     description:
-      "Visually orchestrate autonomous agents without writing boilerplate code",
-    icon: Rocket,
+      "AI-powered vendor negotiations and spend optimization deliver significant cost savings across all procurement categories.",
+    icon: DollarSign,
   },
   {
-    title: "Iterate Rapidly",
+    title: "80% Faster Processing",
     description:
-      "Visually orchestrate autonomous agents without writing boilerplate code",
-    icon: RefreshCw,
+      "Automated workflows and intelligent routing eliminate bottlenecks, dramatically reducing procurement cycle times.",
+    icon: Zap,
   },
   {
-    title: "Scale Smarter",
+    title: "Enterprise-Grade Security",
     description:
-      "Visually orchestrate autonomous agents without writing boilerplate code",
-    icon: BarChart3,
+      "SOC 2 Type II certified with end-to-end encryption, ensuring your sensitive procurement data stays protected.",
+    icon: Shield,
   },
   {
-    title: "Reuse Intelligence",
+    title: "Seamless Integration",
     description:
-      "Visually orchestrate autonomous agents without writing boilerplate code",
-    icon: Layers,
+      "Native integrations with ERP, finance, and supplier systems ensure smooth data flow and minimal disruption.",
+    icon: Link,
   },
   {
-    title: "Seamless Collaboration",
+    title: "AI-Driven Insights",
     description:
-      "Visually orchestrate autonomous agents without writing boilerplate code",
-    icon: Users,
+      "Machine learning algorithms provide predictive analytics and actionable insights to optimize procurement strategy.",
+    icon: Brain,
   },
   {
-    title: "Share Knowledge",
+    title: "Industry Recognition",
     description:
-      "Visually orchestrate autonomous agents without writing boilerplate code",
-    icon: Share2,
+      "Award-winning platform recognized by Gartner and Forrester as a leader in procurement technology innovation.",
+    icon: Award,
   },
 ];
