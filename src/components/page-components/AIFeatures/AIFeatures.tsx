@@ -13,6 +13,7 @@ import SectionTitle from "../common/SectionTitle";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import Section from "../common/Section";
 import { Badge } from "@/components/ui/badge";
+import SectionDesc from "../common/SectionDesc";
 
 const AIFeatures = () => {
     return (
@@ -20,7 +21,7 @@ const AIFeatures = () => {
             <div className="flex flex-col justify-center items-center gap-4 mb-12">
                 <Badge variant="outline" className="text-xs text-primary border-none font-medium">AI-Powered Procurement Platform</Badge>
                 <SectionTitle title="AI-powered Procurement Platform That Thinks Ahead" className="max-w-sm mx-auto text-center" />
-                <p className="text-muted-foreground">Seamless procurement through AI Innovation</p>
+                <SectionDesc description="Seamless procurement through AI Innovation" />
             </div>
             <BentoGrid className="auto-rows-auto grid-rows-none">
                 {items.map((item, i) => (

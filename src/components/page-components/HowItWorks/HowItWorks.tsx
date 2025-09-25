@@ -1,11 +1,11 @@
 "use client"
-
 import { useState, useEffect, useRef } from "react"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import SectionTitle from "../common/SectionTitle"
 import Section from "../common/Section"
 import Image from "next/image"
+import SectionDesc from "../common/SectionDesc"
 
 interface Feature {
   title: string
@@ -78,12 +78,11 @@ export default function Features({ items, autoPlay = true, interval = 5000 }: Fe
       <div className="flex flex-col justify-center items-center text-center gap-4 mb-12">
         <Badge variant="outline" className="text-xs text-primary border-none font-medium">How It Works</Badge>
         <SectionTitle title="Effortless Implementation, Lasting Procurement Value " />
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          EP365 makes procurement automation simple. Go live fast, empower your
-          teams, and achieve measurable ROI without the headaches of complex IT rollouts.        </p>
+        <SectionDesc description="EP365 makes procurement automation simple. Go live fast, empower your
+          teams, and achieve measurable ROI without the headaches of complex IT rollouts." className="max-w-2xl mx-auto" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0 border-t">
         <div className="flex flex-col divide-y border-r border-divide">
           {items.map((item, idx) => (
             <div
@@ -109,13 +108,13 @@ export default function Features({ items, autoPlay = true, interval = 5000 }: Fe
           ))}
         </div>
 
-        <div className="relative min-h-[300px] flex items-center justify-center">
+        <div className="relative min-h-[300px]">
           {items.map((item, idx) => (
 
             <div
               key={idx}
               className={cn(
-                "absolute inset-0 transition-opacity duration-500 w-full rounded-lg overflow-clip",
+                "absolute inset-0 transition-opacity duration-500 rounded-xl overflow-clip m-4",
                 activeIndex === idx ? "opacity-100 z-10" : "opacity-0 z-0"
               )}
             >

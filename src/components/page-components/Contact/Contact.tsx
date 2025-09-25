@@ -13,6 +13,7 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 import { Card } from "@/components/ui/card";
 import Section from "../common/Section";
 import SectionTitle from "../common/SectionTitle";
+import SectionDesc from "../common/SectionDesc";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -21,7 +22,7 @@ const contactSchema = z.object({
   message: z.string().min(1, "Message is required"),
 });
 
-const onContactSubmit = () => {};
+const onContactSubmit = () => { };
 
 const ContactUS = () => {
   const contactForm = useForm<z.infer<typeof contactSchema>>({
@@ -42,13 +43,9 @@ const ContactUS = () => {
             <Mail className="text-primary w-6 h-6" />
           </div>
           <SectionTitle title="Contact Us" className="mb-4" />
-          <p>
-            We are always looking for ways to improve our products and services.
-            Contact us and let us know how we can help you.
-          </p>
-          <p className="text-muted-foreground my-4">
-            info@ep365.com . +1 (800) 123 XX21 . support@yoursaas.ai
-          </p>
+          <SectionDesc description="We are always looking for ways to improve our products and services.
+            Contact us and let us know how we can help you." />
+          <SectionDesc description="info@ep365.com . +1 (800) 123 XX21 . support@yoursaas.ai" className="my-4" />
         </div>
 
         <div className="w-full md:w-1/2 space-y-4">

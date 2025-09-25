@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import SectionTitle from "../common/SectionTitle";
 import { benefitsData } from "./benefitsData";
 import Section from "../common/Section";
+import { motion } from "framer-motion";
+import SectionDesc, { itemVariants } from "../common/SectionDesc";
 
 const Benefits = () => {
   return (
@@ -14,10 +16,8 @@ const Benefits = () => {
           Benefits
         </Badge>
         <SectionTitle title="Making Engineers 10x faster" />
-        <p className="text-muted-foreground mx-auto max-w-lg">
-          We empower developers and technical teams to create, simulate, and
-          manage AI-driven workflows visually
-        </p>
+        <SectionDesc description="We empower developers and technical teams to create, simulate, and
+          manage AI-driven workflows visually" className="max-w-lg mx-auto" />
       </div>
 
       <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -28,13 +28,28 @@ const Benefits = () => {
               key={index}
               className="relative z-10 rounded-lg bg-gray-100/40 h-50 p-4 transition duration-200 hover:bg-gray-50/70 md:p-5 dark:bg-neutral-800"
             >
-              <div className="flex items-center gap-2">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                variants={itemVariants}
+              >
                 <Icon className="text-primary size-5" />
-              </div>
-              <h3 className="mt-4 mb-2 text-lg font-medium">{benefit.title}</h3>
-              <p className="text-muted-foreground">
-                {benefit.description}
-              </p>
+              </motion.div>
+
+              <motion.h3
+                className="mt-4 mb-2 text-lg font-medium"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                variants={itemVariants}
+              >
+                {benefit.title}
+              </motion.h3>
+
+              <SectionDesc description={benefit.description} />
             </div>
           );
         })}

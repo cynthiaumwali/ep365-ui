@@ -9,6 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { faqData } from './faqData';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import SectionDesc from '../common/SectionDesc';
 
 export default function FAQ() {
     return (
@@ -16,9 +17,7 @@ export default function FAQ() {
             <div className="flex flex-col justify-center items-center text-center gap-6 pb-12 border-b">
                 <Badge variant="outline" className="text-xs text-primary border-none font-medium">FAQS</Badge>
                 <SectionTitle title="Let's Answer Your Questions" />
-                <p className="max-w-xl mx-auto text-muted-foreground">
-                    If you have any questions or need assistance, feel free to reach out to us.
-                </p>
+                <SectionDesc description="If you have any questions or need assistance, feel free to reach out to us." className="max-w-xl mx-auto" />
                 <div className="flex items-center gap-4 mb-2">
                     <Button className="bg-black text-white dark:bg-white dark:text-black">Book a demo</Button>
                     <Button variant="outline">Watch Video</Button>
