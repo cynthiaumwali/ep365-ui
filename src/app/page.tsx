@@ -1,7 +1,6 @@
 import AIFeatures from "@/components/page-components/AIFeatures";
-import Banner from "@/components/page-components/Banner/Banner";
+import Attributes from "@/components/page-components/Attributes/Attributes";
 import ContactUS from "@/components/page-components/Contact";
-import { CTAPopup } from "@/components/page-components/CTAPopup.tsx";
 import Features from "@/components/page-components/Features";
 import Hero from "@/components/page-components/Hero/Hero";
 import Industries from "@/components/page-components/Industries";
@@ -21,15 +20,15 @@ export default function Home() {
     <>
       <Hero />
       <Features />
+      <Attributes />
       <Industries />
       <AIFeatures />
       <WhyUs />
       <Statistics />
       <Testimonials />
       <PricingPlans />
-      <Banner />
       <ContactUS />
-      <CTAPopup videoLink="https://drive.google.com/file/d/1Ou6DT9lEHTH1AtD_4z4ybcggjICrR8tI/view?usp=sharing" />
+      {/* <CTAPopup videoLink="https://drive.google.com/file/d/1Ou6DT9lEHTH1AtD_4z4ybcggjICrR8tI/view?usp=sharing" /> */}
     </>
   );
 }
